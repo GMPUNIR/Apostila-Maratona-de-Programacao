@@ -1,6 +1,7 @@
 \newpage
 
 \section{Introdução}
+
 A Maratona de Programação é um evento da Sociedade Brasileira de Computação que existe desde o ano de 1996. A Maratona nasceu das competições regionais classificatórias para as finais mundiais do concurso de programação, o International Collegiate Programming Contest, e é parte da regional sulamericana do concurso.
 
 Ela se destina a alunos e alunas de cursos de graduação e início de pós-graduação na área de Computação e afins (Ciência da Computação, Engenharia de Computação, Sistemas de Informação, Matemática, etc). A competição promove nos estudantes a criatividade, a capacidade de trabalho em equipe, a busca de novas soluções de software e a habilidade de resolver problemas sob pressão. De ano em ano temos observado que as instituições e principalmente as grandes empresas da área têm valorizado os alunos que participam da Maratona.
@@ -14,7 +15,9 @@ Os competidores do time devem colaborar para descobrir os problemas mais fáceis
 O julgamento é estrito. No início da competição os competidores recebem os problemas que devem ser resolvidos. Nos enunciados dos problemas constam exemplos dos dados dos problemas, mas eles não têm acesso às instâncias testadas pelos juízes. A cada submissão incorreta de um problema (ou seja, que deu resposta incorreta a uma das instâncias dos juízes) é atribuída uma penalidade de tempo. O time que conseguir resolver o maior número de problemas (no menor tempo acumulado com as penalidades, caso haja empate) é declarado o vencedor\footnote{Está introdução foi retirada do site oficial da Maratona de Programação. \url{http://maratona.ime.usp.br/}}. 
 
 \subsection{Dicas para a competição}
+
 Conforme você leu, a maratona de programação geralmente ocorre no período de 5 horas ininterruptas e seu objetivo é a resolução do maior número de problemas. Como a competição ocorre em um longo tempo lhe é aconselhável um preparo físico e mental para que você suporte o estresse da competição. Crie uma rotina de programação. Inicie com alguns minutos, passe para horas e logo você estará programando por horas a fio. Reuniões antes da competição com os integrantes do time auxiliam no entrosamento da equipe. Lembre-se sempre, está é uma competição em equipe. Não tente resolver tudo sozinho pois você irá perder tempo. Existem plataformas online que simulam a competição (também chamada de Contest) ou possuem um grande acervo de problemas relacionados a ela. Podemos mencionar algumas plataformas, tais como:
+
 \begin{itemize}
     \item Codeforces
     \item URI Online Judge
@@ -48,7 +51,7 @@ A análise de algoritmos, estuda certos problemas computacionais recorrentes, ou
         \item Estimar o tempo que a execução do algoritmo consome;
         \item A estimativa do espaço de memória usado pelo algoritmo também é importante em muitos casos.
     \end{enumerate}
-    
+
 Conforme a literatura explana, existem três tipos de notações assintóticas estudadas na computação. Sendo elas:
 
     \begin{itemize}
@@ -123,7 +126,7 @@ A lista a seguir contém complexidades de tempo comuns de algoritmos:
 
     \item O($\sqrt{\textit{n}}$): Um algoritmo de \textbf{raiz quadrada} é mais lento que O(log \textit{n}), mas é mais rápido que O(\textit{n}). Uma propriedade especial de raízes quadradas é que $\sqrt{\textit{n}}$ = n / $\sqrt{\textit{n}}$ , então a raiz quadrada $\sqrt{\textit{n}}$ mentiras, em certo sentido, no meio da entrada.
 
-    \item O(\textit{n}): Um algoritmo \textbf{linear} passa pela entrada um número constante de vezes. Este é geralmente a melhor complexidade de tempo possível, porque geralmente é necessário acesse cada elemento de entrada pelo menos uma vez antes de relatar a resposta.
+    \item O(\textit{n}): Um algoritmo \textbf{linear} passa pela entrada um número constante de vezes. Este é geralmente a melhor complexidade de tempo possível, porque geralmente é necessário que acesse cada elemento de entrada pelo menos uma vez antes de relatar a resposta.
 
     \item O(\textit{n} log \textit{n}): Essa complexidade de tempo geralmente indica que o algoritmo classifica a entrada, porque a complexidade de tempo dos algoritmos de ordenação eficientes é O(\textit{n} log \textit{n}). Outra possibilidade é que o algoritmo use uma estrutura de dados onde cada a operação leva tempo O(log \textit{n}).
 
@@ -131,9 +134,9 @@ A lista a seguir contém complexidades de tempo comuns de algoritmos:
 
     \item O($n^3$): Um algoritmo \textbf{cúbico} geralmente contém três loops aninhados. É possível ir através de todas as trincas dos elementos de entrada no tempo O($n^3$).
 
-    \item O(2$^n$): Essa complexidade de tempo geralmente indica que o algoritmo itera todos os subconjuntos dos elementos de entrada. Por exemplo, os subconjuntos de {1, 2, 3} são , {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3} e {1, 2, 3}.
+    \item O(2$^n$): Essa complexidade de tempo geralmente indica que o algoritmo itera todos os subconjuntos dos elementos de entrada. Por exemplo, os subconjuntos de {1, 2, 3} são: $\varnothing$, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3} e {1, 2, 3}.
 
-    \item O(\textit{n}!): Essa complexidade de tempo geralmente indica que o algoritmo itera todas as permutações dos elementos de entrada. Por exemplo, as permutações de {1, 2, 3} são (1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2) e (3 2, 1).
+    \item O(\textit{n}!): Essa complexidade de tempo geralmente indica que o algoritmo itera todas as permutações dos elementos de entrada. Por exemplo, as permutações de {1, 2, 3} são: (1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2) e (3 2, 1).
 
 \end{itemize}
 
@@ -149,13 +152,11 @@ A Guide to the Theory of NP-Completeness}
 Muitas vezes há vários algoritmos possíveis para resolver um problema de modo que as complexidades do tempo são diferentes. Esta seção discute um problema clássico que tem uma solução direta O(n$^3$). No entanto, projetando um algoritmo melhor, é possível resolver o problema no tempo O(\textit{n}$^2$) e até no tempo O(\textit{n}).    
 
 Dado um vetor de \textit{n} números, nossa tarefa é calcular o máximo de soma dos raios, isto é, a maior soma possível de uma sequência de valores consecutivos no vetor 2. O problema é interessante quando pode haver valores negativos no
-vetor. Por exemplo, no vetor: $ [-1, 2, 4, -3, 5, 2, -5, 2]$,
-
-A soma máxima desse vetor é 10.
+vetor. Por exemplo, no vetor:  $[-1, 2, 4, -3, 5, 2, -5, 2]$, a soma máxima desse vetor é 10.
 
 \subsubsection{Algoritmo 1}
 
-Uma maneira simples de resolver o problema é percorrer todos os sub-argumentos possíveis, calcule a soma dos valores em cada subvetor e mantenha a soma máxima. O código a seguir implementa esse algoritmo:
+Uma maneira simples de resolver o problema é percorrer todos os sub-argumentos possíveis, calcular a soma dos valores em cada subvetor e manter a soma máxima. O código a seguir implementa esse algoritmo:
 
 \lstinputlisting[style=CPP,label={algoritmo1},caption = {Algoritmo 1 em O(\textit{n}$^3$)}]{algoritmos/algoritmo_1.cpp}
 
@@ -175,7 +176,7 @@ Após essa alteração, a complexidade do tempo é O(\textit{n}$^2$).
 Surpreendentemente, é possível resolver o problema em tempo O(\textit{n}), o que significa que apenas um loop é suficiente. A ideia é calcular, para cada posição do vetor, soma máxima de um subvetor que termina nessa posição. Depois disso, a resposta para o problema é o máximo dessas somas. Considere o subproblema de encontrar o subvetor de soma máxima que termina em posição \textit{k}. Existem duas possibilidades:
 
     \begin{enumerate}
-        \item O subvetor contém apenas o elemento na posição \textit{k}.
+        \item O subvetor contém apenas o elemento na posição \textit{k};
         \item O subvetor consiste em um subvetor que termina na posição \textit{k} - 1, seguido por o elemento na posição \textit{k}.
     \end{enumerate}
 
@@ -188,11 +189,11 @@ O algoritmo contém apenas um loop que passa pela entrada, então o tempo comple
 
 \subsubsection{Comparação de eficiência}
 
-É interessante estudar como os algoritmos eficientes são na prática. Os seguintes tabela mostra os tempos de execução dos algoritmos acima para diferentes valores de \textit{n} em um computador moderno. Em cada teste, a entrada foi gerada aleatoriamente. O tempo necessário para a leitura a entrada não foi medida.
+É interessante estudar como os algoritmos eficientes são na prática. A seguinte tabela mostra os tempos de execução dos algoritmos acima para diferentes valores de \textit{n} em um computador moderno. Em cada teste, a entrada foi gerada aleatoriamente. O tempo necessário para a leitura a entrada não foi medida.
 
 \begin{table}[H]
    \begin{center}
-        \begin{tabular}{csrrr}
+        \begin{tabular}{crrr}
             \textbf{Tamanho de \textit{n}} & \textbf{Algoritmo 1} & \textbf{Algoritmo 2} & \textbf{Algoritmo 3}\\ 
             \hline
             10$^2$ &   0.0 s & 0.0 s & 0.0 s \\
@@ -203,12 +204,12 @@ O algoritmo contém apenas um loop que passa pela entrada, então o tempo comple
             10$^7$ & > 10.0 s & > 10.0 s & 0.0 s \\
             \hline
         \end{tabular}
-         \caption{Aoooooooooooooooooo 35}
+         \caption{Tempo de execução dos algoritmos}
          \label{tab:complexidade}
     \end{center}
 \end{table}
 
-A comparação mostra que todos os algoritmos são eficientes quando o tamanho da entrada é insumos pequenos, mas maiores, trazem diferenças notáveis nos tempos de execução dos algoritmos. Algoritmo 1 torna-se lento quando \textit{n} = 10 $^4$ e Algoritmo 2 torna-se lento quando \textit{n} = 10$^5$. Apenas o Algoritmo 3 é capaz de processar até mesmo os maiores entradas instantaneamente.
+A comparação mostra que todos os algoritmos são eficientes quando o tamanho da entrada é insumos pequenos, mas maiores, trazem diferenças notáveis nos tempos de execução dos algoritmos. Algoritmo 1 torna-se lento quando \textit{n} = 10$^4$ e Algoritmo 2 torna-se lento quando \textit{n} = 10$^5$. Apenas o Algoritmo 3 é capaz de processar até mesmo os maiores entradas instantaneamente.
 
 
 \begin{comment}
